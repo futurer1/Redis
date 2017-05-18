@@ -7,6 +7,9 @@
 1. Строки (String)
 set users:leto "value"        //установить значение value для ключа users:leto
 get users:leto                //получить значение для ключа users:leto
+strlen users:leto             //вернуть длину значения ключа
+getrange users:leto 27 40     //вернуть подстроку
+append users:leto "some string" //присоеденить подстроку к значению ключа
 
 Сложность исполнения команд:
   - Асимптотическая O(1)=const (для любого кол.ва элементов одно время исполнения)
