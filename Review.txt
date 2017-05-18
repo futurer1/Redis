@@ -21,7 +21,15 @@ hget users:goku powerlevel        //получить значение хеша
 hmset users:goku race saiyan age 737  //установить несколько хешей
 hmget users:goku race powerlevel      //вернуть множество хешей
 
+3. Списки (Lists)
+rpush newusers goku
 
+4. Множества (Sets)
+sadd friends:leto phanima paul chani jessica    //установить множество 1
+sadd friends:duncan paul jessica alia           //установить множество 2
+sismember friends:leto jessica                  //узнать входит ли значение jessica в множество friends:leto
+sinter friends:leto friends:duncan    //вывести разницу между множеством 1 и 2
+sinterstore friends:leto_duncan friends:leto friends:duncan   //сохранить разницу между множествами 1 и 2
 
 Сложность исполнения команд:
   - Асимптотическая O(1)=const (для любого кол.ва элементов одно время исполнения)
